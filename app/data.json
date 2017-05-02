@@ -16,6 +16,11 @@
 		"index": "Index - Another website front-end"
 		}
 	],
+	"fonts": [
+		{
+			"jura": "https://fonts.googleapis.com/css?family=Jura:300,400,600"
+		}
+	],
 	"scripts": [
 		{"vendor": "jquery-3.2.1.min.js"},
 		{"vendor": "bootstrap.min.js"},
