@@ -1,0 +1,38 @@
+<!-- layout.nunjucks -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+  {{#document_title}}
+  	{{index}}
+  {{/document_title}}  
+  </title>
+  {{#styles}}
+  <link rel="stylesheet" href="{{lib}}"></link>
+  {{/styles}}
+	<!-- build:css css/styles.min.css-->
+	<link rel="stylesheet" href="css/styles.css">
+	<!-- <link rel="stylesheet" href="css/another-stylesheet.css"> -->
+	<!-- endbuild -->
+	<link rel="author" href="humans.txt">
+</head>
+<body>
+	{{> partials/header}}
+  <div id="content" class="container">
+	{{> partials/content}}
+	{{! comment }}
+  </div>
+  {{#scripts}}
+  <script src="vendor/{{vendor}}"></script>
+  {{/scripts}}
+  <!--build:js js/main.min.js-->
+	<!--<script src="js/lib/a-library.js"></script>-->
+	<!--<script src="js/lib/another-library.js"></script>-->
+	<script src="js/main.js"></script>
+	<!-- endbuild -->
+</body>
+</html>

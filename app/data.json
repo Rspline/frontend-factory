@@ -1,0 +1,29 @@
+{
+  "images": [
+		{
+			"image_1": true,
+	    	"src": "image-one.png",
+	    	"alt": "Image one alt text"
+		},
+		{
+				"image_2": true,
+		    	"src": "image-two.png",
+		    	"alt": "Image two alt text"
+			}
+	],
+	"document_title": [
+		{
+		"index": "Index - Another website front-end"
+		}
+	],
+	"scripts": [
+		{"vendor": "jquery-3.2.1.min.js"},
+		{"vendor": "bootstrap.min.js"},
+		{"vendor": "velocity.min.js"},
+		{"vendor": "velocity.ui.js"}
+	],
+	"styles": [
+		{"lib": "bootstrap.min.css"},
+		{"lib": "bootstrap-theme.min.css"}
+	]
+}
