@@ -6,8 +6,9 @@ Custom Gulp recipe for frontend development
 * Bootstrap / jQuery
 * SASS
 
-## package.json
+## PACKAGE
 ```
+
 {
   "name": "frontend-factory",
   "version": "1.0.0",
@@ -35,6 +36,33 @@ Custom Gulp recipe for frontend development
   }
 }
 
+```
+## STRUCTURE
+
+```
+
+|- app/
+|   |- css/
+|   |- fonts/
+|   |- images/ 
+|   |- js/ 
+|   |- scss/
+|   |- vendor/
+|   |- index.html
+|   |- templates
+|      |- partials
+|
+|- dist/
+|   |- css/
+|   |- fonts/
+|   |- images/ 
+|   |- js/ 
+|   |- index.html
+|
+|- gulpfile.js
+|- node_modules/
+|- package.json
+|- README.md
 
 ```
 
