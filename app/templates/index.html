@@ -12,7 +12,7 @@
   {{/document_title}}  
   </title>
   {{#styles}}
-  <link rel="stylesheet" href="{{lib}}"></link>
+  <link rel="stylesheet" href="vendor/css/{{lib}}"></link>
   {{/styles}}
 	<!-- build:css css/styles.min.css-->
 	<link rel="stylesheet" href="css/styles.css">
@@ -25,12 +25,12 @@
 </head>
 <body>
 	{{> partials/header}}
-  <div id="content" class="container">
+  <div id="content" class="container some-class">
 	{{> partials/content}}
 	{{! comment }}
   </div>
   {{#scripts}}
-  <script src="vendor/{{vendor}}"></script>
+  <script src="vendor/js/{{vendor}}"></script>
   {{/scripts}}
   <!--build:js js/main.min.js-->
 	<!--<script src="js/lib/a-library.js"></script>-->
