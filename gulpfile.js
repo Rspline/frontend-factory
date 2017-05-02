@@ -96,7 +96,7 @@ gulp.task('clean:temp', function() {
 
 // Copying fonts & vendors
 gulp.task('fonts', function() {
-  return gulp.src('app/fonts/**/*')
+  return gulp.src('app/vendor/fonts/**/*')
     .pipe(gulp.dest('dist/fonts'))
 })
 gulp.task('vendor', function() {

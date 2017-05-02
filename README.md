@@ -48,6 +48,10 @@ Custom Gulp recipe for frontend development
 |   |- js/ 
 |   |- scss/
 |   |- vendor/
+|      |- css
+|      |- js
+|      |- fonts
+|
 |   |- index.html
 |   |- templates
 |      |- partials
@@ -57,6 +61,11 @@ Custom Gulp recipe for frontend development
 |   |- fonts/
 |   |- images/ 
 |   |- js/ 
+|   |- vendor/
+|   |  |- css
+|   |  |- js
+|   |  |- fonts
+|   |
 |   |- index.html
 |
 |- gulpfile.js
