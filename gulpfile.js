@@ -61,7 +61,7 @@ gulp.task('mustache', function(){
 // Optimizing CSS and JavaScript 
 gulp.task('useref', function() {
 
-  return gulp.src('app/*.html')
+  return gulp.src('app/*.+(html|php)')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cssnano()))
