@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var lazypipe = require('lazypipe');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync');
 var useref = require('gulp-useref');
@@ -37,8 +38,10 @@ gulp.task('watch', function() {
 // Sass
 gulp.task('sass', function() {
   return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
+    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError)) // Passes it through a gulp-sass, log errors to console
     .pipe(sass({includePaths: ['scss']}))
+    .pipe(sourcemaps.write('map'))
     .pipe(gulp.dest('app/css')) // Outputs it in the css folder
     .pipe(browserSync.reload({ // Reloading with Browser Sync
       stream: true
@@ -60,23 +63,24 @@ gulp.task('mustache', function(){
 // ------------------
 
 // Optimizing CSS and JavaScript 
-gulp.task('useref', function() {
+gulp.task('useref' ,function() {
 
   return gulp.src('app/*.+(html|php)')
-    .pipe(useref())
+    .pipe(useref({}, lazypipe().pipe(sourcemaps.init, { loadMaps: true })))
     .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cssnano()))
+    .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest('dist'));
 });
 
 // Optimizing Images 
-gulp.task('images', function() {
-  return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
+gulp.task('img', function() {
+  return gulp.src('app/img/**/*.+(png|jpg|jpeg|gif|svg)')
     // Caching images that ran through imagemin
     .pipe(cache(imagemin({
       interlaced: true,
     })))
-    .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest('dist/img'))
 });
 
 
@@ -88,7 +92,7 @@ gulp.task('clean', function() {
 })
 
 gulp.task('clean:dist', function() {
-  return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*', '!dist/vendor', '!dist/vendor/**/*']);
+  return del.sync(['dist/**/*', '!dist/img', '!dist/img/**/*', '!dist/vendor', '!dist/vendor/**/*']);
 });
 
 gulp.task('clean:temp', function() {
@@ -118,7 +122,7 @@ gulp.task('build', function(callback) {
     'clean:dist',
     'sass',
     'mustache',
-    ['useref', 'images', 'fonts', 'vendor'],
+    ['useref', 'img', 'fonts', 'vendor'],
     callback
   )
 })
