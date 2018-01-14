@@ -1,6 +1,6 @@
-/****************************
- HIGH PPI DISPLAY BACKGROUNDS
-*****************************/
+/**
+Retina mixin
+*/
 body {
   font-family: 'Saira Condensed', sans-serif;
   background-color: #333;
@@ -16,7 +16,7 @@ body {
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
   body {
-    background-image: url("../img/dark_wall@2x.png"); } }
+    background-image: url("../img/dark_wall_@2x.png"); } }
 
 h1 {
   text-align: center;
