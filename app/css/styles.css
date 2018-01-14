@@ -1,12 +1,26 @@
+/****************************
+ HIGH PPI DISPLAY BACKGROUNDS
+*****************************/
 body {
-  font-family: 'Jura', sans-serif;
+  font-family: 'Saira Condensed', sans-serif;
   background-color: #333;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 300;
-  color: #f1f1f1; }
+  color: #333;
+  background-image: url("../img/dark_wall.png");
+  background-size: 300px 300px;
+  background-position: center center;
+  background-repeat: repeat;
+  /* This pattern is downloaded from www.subtlepatterns.com 
+ 	If you need more, that's where to get'em.*/ }
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  body {
+    background-image: url("../img/dark_wall@2x.png"); } }
 
 h1 {
-  text-align: center; }
+  text-align: center;
+  color: #f1f1f1; }
 
 .wrapper {
   background-color: rgba(255, 255, 255, 0.7);

@@ -1,13 +1,19 @@
 @import 'colors';
+@import 'retina';
 body {
-	font-family: 'Jura', sans-serif;
+	font-family: 'Saira Condensed', sans-serif;
 	background-color: $gray;
-	font-size: 16px;
+	font-size: 1em;
 	font-weight: 300;
-	color: #f1f1f1;
+	color: $gray;
+	@include background-2x( '../img/dark_wall', 'png', 300px, 300px, center center, repeat );
+	/* This pattern is downloaded from www.subtlepatterns.com 
+ 	If you need more, that's where to get'em.*/
+
 }
 h1 {
 	text-align: center;
+	color: #f1f1f1;
 }
 
 @import 'content';

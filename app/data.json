@@ -1,34 +1,18 @@
 {
-  "images": [
+ 	"document_title": [
 		{
-			"image_1": true,
-	    	"src": "image-one.png",
-	    	"alt": "Image one alt text"
-		},
-		{
-				"image_2": true,
-		    	"src": "image-two.png",
-		    	"alt": "Image two alt text"
-			}
-	],
-	"document_title": [
-		{
-		"index": "Index - Another website front-end"
+		"index": "Index - Another website"
 		}
 	],
 	"fonts": [
-		{
-			"jura": "https://fonts.googleapis.com/css?family=Jura:300,400,600"
-		}
+		{"jura": "https://fonts.googleapis.com/css?family=Jura:300,400,600"},
+		{"saira": "https://fonts.googleapis.com/css?family=Saira+Condensed:400,700"}
 	],
 	"scripts": [
-		{"vendor": "jquery-3.2.1.min.js"},
-		{"vendor": "bootstrap.min.js"},
-		{"vendor": "velocity.min.js"},
-		{"vendor": "velocity.ui.js"}
+		{"vendor": "jquery-3.2.1.slim.min.js"},
+		{"vendor": "bootstrap.min.js"}
 	],
 	"styles": [
-		{"lib": "bootstrap.min.css"},
-		{"lib": "bootstrap-theme.min.css"}
+		{"lib": "bootstrap.min.css"}
 	]
 }
