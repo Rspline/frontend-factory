@@ -2,12 +2,12 @@
 body {
 	font-family: 'Jura', sans-serif;
 	background-color: $gray;
-	font-size: 1em;
+	font-size: 16px;
 	font-weight: 300;
 	color: #f1f1f1;
-	h1 {
-		text-align: center;
-	}
+}
+h1 {
+	text-align: center;
 }
 
 @import 'content';

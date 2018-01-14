@@ -19,13 +19,13 @@
 	<!-- <link rel="stylesheet" href="css/another-stylesheet.css"> -->
 	<!-- endbuild -->
 	{{#fonts}}
-	<link href="{{jura}}" rel="stylesheet"> 
+	<link href="{{{jura}}}" rel="stylesheet"> 
 	{{/fonts}}
 	<link rel="author" href="humans.txt">
 </head>
 <body>
 	{{> partials/header}}
-  <div id="content" class="container some-class">
+  <div class="container wrapper">
 	{{> partials/content}}
 	{{! comment }}
   </div>
